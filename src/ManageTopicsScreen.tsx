@@ -114,7 +114,7 @@ export function ManageTopicsScreen({
         <div className={`row__icon${topic.iconSrc ? " row__icon--img" : ""}`}>
           {topic.iconSrc ? (
             <img
-              src={encodeIconPath(topic.iconSrc)}
+              src={`${import.meta.env.BASE_URL}${encodeIconPath(topic.iconSrc)}`}
               alt={topic.iconAlt ?? topic.title ?? ""}
               decoding="async"
               loading="lazy"
